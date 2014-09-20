@@ -882,7 +882,7 @@ th.hidden-lg,td.hidden-lg{display:table-cell !important;}
 @media (min-width:1200px){.hidden-lg,tr.hidden-lg,th.hidden-lg,td.hidden-lg{display:none !important;}}
 .visible-print,tr.visible-print,th.visible-print,td.visible-print{display:none !important;}
 @media print{.visible-print{display:block !important;}tr.visible-print{display:table-row !important;} th.visible-print,td.visible-print{display:table-cell !important;} .hidden-print,tr.hidden-print,th.hidden-print,td.hidden-print{display:none !important;}}header{font-family:Monaco,Menlo,Consolas,"Courier New",monospace;padding:0em;margin:0em;border-bottom:0.18em solid #fdffbf;font-style:normal;font-size:25px;color:#fdffbf;text-align:float:left;}
-body{background-color:#333333;font-family:Arial,Helvetica,sans-serif;padding:1em;margin:1em;font-style:normal;color:#ffffff;text-align:float:left;}
+body{background-color:#000000;font-family:Arial,Helvetica,sans-serif;padding:1em;margin:1em;font-style:normal;color:#ffffff;text-align:float:left;}
 hr{width:100%;color:#d6c400;background-color:#d6c400;height:.3em;}
 footer{padding:1em;margin:1em;border-top:0.3em solid #fdffbf;color:#d6c400;text-align:center;}
 .jumbotron{text-align:center;}
