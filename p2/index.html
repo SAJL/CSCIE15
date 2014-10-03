@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <!--CSCIE15-Fall2014-Project1-LedouxSarah-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+<!--Navigation Bar-->
+    	<div class="row">
+          <nav class="navbar navbar-warning navbar-inverse" role="navigation">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <span class="glyphicon glyphicon-hand-down"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-fire"></span><br>Home/Project 1<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                          <li><a href="https://github.com/SAJL/CSCIE15.git">Git</a></li>
+                          <li><a href="http://sarahledoux.com/hes/cscie15/p1">Live URL</a></li>
+                       </ul>
+                     </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span><br>Project 2<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                          <li><a href="#">Git</a></li>
+                          <li><a href="#">Live URL</a></li>
+                       </ul>
+                    </li>
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-align-center"></span><br>Project 3<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                          <li><a href="#">Git</a></li>
+                          <li><a href="#">Live URL</a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-compressed"></span><br>Project 4<b class="caret"></b></a>
+                       <ul class="dropdown-menu">
+                          <li><a href="#">Git</a></li>
+                          <li><a href="#">Live URL</a></li>
+                       </ul>
+                     </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+
+<!-- article text -->
+		<article class="row"> 
+        	<div class="col-xs-12"> <br>
+            </div>
+		</article>
+        
+        
+<!--jumbotron-->
+        <div class="row clearfix">
+			<div class="jumbotron">
+                	<img src="images/knishandme.jpg" alt="expand my mind" id="Knish!" class="img-responsive img-rounded img-middle img-thumbnail caption"><br>Sarah Ledoux</div></div>
+
+
+
+<!-- Grid Thumbnail Navigation -->
+<div class="clearfix visible-xs visible-sm visible-md visible-lg centered"></div>
+        <div class="row clearfix">
+          <div class="col-lg-1 col-centered"></div>
+        
+            <div class="col-md-2 col-sm-6 col-xs-12 thumbnail caption">
+                        <h3><span id="me" class="glyphicon glyphicon-fire" rel="popover" data-title="Sarah Ledoux" data-content="Currently, I'm a Academic Technologist in higher ed in charge of support & training for faculty, staff & students for LMS. In a previous life, I was a general, pre to post, technician and editor at several documentary film houses."></span><br>About Me</h3>
+       					<p><a href="http://sarahledoux.com/hes/cscie15/p1" class="active btn btn-warning">navigate</a></p>
+          	</div>
+            
+            <div class="col-md-2 col-sm-6 col-xs-12 thumbnail caption">
+                        <h3><span id="course" class="glyphicon glyphicon-comment" rel="popover" data-original-title="Taking this Course" data-content="I want to expand my knowledge of the Git community and development of applications so that I can better support, recommend and develop learning tools."></span><br>This Course?</h3>
+                        <p><a href="http://sarahledoux.com/hes/cscie15/p1" class="btn btn-warning">navigate</a></p>
+       	  </div>
+            
+            <div class="col-md-2 col-sm-6 col-xs-12 thumbnail caption">
+                        <h3><span id="program" class="glyphicon glyphicon-align-center" rel="popover" data-original-title="Programming" data-content="I've done a lot of web design and implimention of programs, with minor tinkering, but nothing on a real scale. I did learn a litte of programming in edX classes for Ruby and Python"></span><br>Programming?</h3>
+                        <p><a href="http://sarahledoux.com/hes/cscie15/p1" class="btn btn-warning">navigate</a></p>
+          	</div>
+            
+          <div class="col-md-2 col-sm-6 col-xs-12 thumbnail caption">
+                        <h3><span id="os" class="glyphicon glyphicon-compressed" rel="popover" data-original-title="what OS?" data-content="I'm primarily using a MAC"></span><br>OS?</h3>
+                        <p><a href="http://sarahledoux.com/hes/cscie15/p1" class="btn btn-warning">navigate</a></p>
+          	</div>
+
+            <div class="col-md-2 col-sm-6 col-xs-12 thumbnail caption">
+                        <h3><span id="anything" class="glyphicon glyphicon-star" rel="popover" data-original-title="Anything Else?" data-content="That's my dog, licking me and rolling like a mad man! He's awesome!"></span><br>Anthing Else?</h3>
+                        <p><a href="http://sarahledoux.com/hes/cscie15/p1" class="btn btn-warning">navigate</a></p>
+            </div>
+            
+        </div>
+
+        
+<!--footer-->
+        <footer class="row">
+               <p><span class="glyphicon glyphicon-copyright-mark"></span> 2014 SAJL</p>
+        </footer>
+        
+        
+	</div>
+    
+<!-- end container -->
+
+<!-- javascript -->
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/popover.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script>
+      $(function (){
+         $("#me").popover({
+		 placement:'top',
+		 trigger: "hover"})
+      });
+      </script>
+      <script>
+      $(function (){
+         $("#course").popover({
+		 placement:'top',
+		 trigger: "hover"})
+      });
+      </script>
+      <script>
+      $(function (){
+         $("#program").popover({
+		 placement:'top',
+		 trigger: "hover"})
+      });
+      </script>
+      <script>
+      $(function (){
+         $("#os").popover({
+		 placement:'top',
+		 trigger: "hover"})
+      });
+      </script>
+      <script>
+      $(function (){
+         $("#anything").popover({
+     placement:'top',
+     trigger: "hover"})
+      });
+      </script>
+</body>
+</html>

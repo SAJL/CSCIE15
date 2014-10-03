@@ -1,0 +1,46 @@
+//
+// Jumbotron
+// --------------------------------------------------
+//SLCustom
+
+.jumbotron {
+  padding: @jumbotron-padding;
+  margin-bottom: @jumbotron-padding;
+  //SLCustom font size
+  font-size: 35px;
+  font-weight: normal;
+  //SLCustom font spacing
+  line-height: (@line-height-base * 1);
+  //SLCustom Jumbotron font color
+  color: @brand-warning;
+  background-color: @jumbotron-bg;
+  //SLCustom stroke with a custom color
+  border: .25em solid @brand-ltyellow;
+  
+  
+  h1 {
+    line-height: 1;
+    color: @jumbotron-heading-color;
+  }
+  p {
+    line-height: 1.4;
+  }
+
+  .container & {
+    border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    (@jumbotron-padding * 1.6);
+    padding-bottom: (@jumbotron-padding * 1.6);
+
+    .container & {
+      padding-left:  (@jumbotron-padding * 2);
+      padding-right: (@jumbotron-padding * 2);
+    }
+
+    h1 {
+      font-size: (@font-size-base * 4.5);
+    }
+  }
+}
