@@ -114,7 +114,7 @@ include('logic.php');
 
               <p>
               <!--dropdown1-->
-                	<select class="form-control" id="numberOfWors" name="numberOfWords" >
+                	<select class="form-control" id="numberOfWords" name="numberOfWords" >
                     	<option value="0"> How many words do you want?</option>
 					    <option value="1" <?php if($numberOfWords == 1){ echo "selected"; } ?> >1</option>
 					    <option value="2" <?php if($numberOfWords == 2){ echo "selected"; } ?> >2</option>
@@ -123,49 +123,34 @@ include('logic.php');
 					    <option value="5" <?php if($numberOfWords == 5){ echo "selected"; } ?> >5</option>
 					</select>
               </p>
-              <p>
+              
+                     <p>
+              <label name="upperCase"><h4>Uppercase first letters?</h4></label>
+        <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> />
+        </p>
+					
+                
+             </div>
+
+
+
+<!-- Col-2 input-->
+                <div class="col-sm-4 col-xs-12 form-group col-2">
+                          
+                <p>
               		<select class="form-control" id="numberOfchar" name="numberOfchar" >
-                    	<option value="0"> What is the minumum number of characters?</option>
+                    	<option value="0"> How many Special Characters Required?</option>
 					    <option value="10" <?php if($numberOfChar == 10){ echo "selected"; } ?> >10</option>
 					    <option value="20" <?php if($numberOfChar == 20){ echo "selected"; } ?> >20</option>
 					    <option value="30" <?php if($numberOfChar == 30){ echo "selected"; } ?> >30</option>
 					    <option value="40" <?php if($numberOfChar == 40){ echo "selected"; } ?> >40</option>
 					    <option value="50" <?php if($numberOfChar == 50){ echo "selected"; } ?> >50</option>
 					</select>
-                         <p>
-               <select class="form-control" id="extraSpecial" name="extraSpecial" >
-						<option value="0">Any extra special requirments?</option>
-					    <option value="Spaces" <?php if($extraSpecial == Spaces){ echo "selected"; } ?> >Spaces</option>
-					    <option value="CamelCase" <?php if($extraSpecial == CamelCase){ echo "selected"; } ?> >Camel Case</option>
-					    <option value="Hyphen" <?php if($extraSpecial == Hyphen){ echo "selected"; } ?> >Hyphens</option>
-					</select>
                     </p>
-					
-                
-               
-<!-- submit button in column div of name -->
-
-               <p>
-               <button class="btn btn-warning btn-lg" input type="submit" name="submitbtn" id="submitbtn">Generate</button>
-               <button class="btn btn-warning btn-lg" input type="reset" name="resetbtn" id="resetbtn">Reset</button>
-               </p>
-             </div>
-
-
-
-<!-- eamil input-->
-                <div class="col-sm-4 col-xs-12 form-group col-2">
-                          
-                
-              <p>
-              		<!--speration-->
-                    <h4>Does the password need numbers?</h4>
-					<input type="radio" name="numbers" value="yes" <?php if($numbers == "yes"){ echo "checked"; } ?> > Yes<br>
-					<input type="radio" name="numbers" value="no" <?php if($numbers == "no"){ echo "checked"; } ?> > No<br>
-              </p>
+             
               <p>
 					<select class="form-control" id="numberOfNumbers" name="numberOfNumbers" >
-						<option value="0">If yes, How many numbers?</option>
+						<option value="0">How many numbers are required?</option>
 					    <option value="1" <?php if($numberOfNumbers == 1){ echo "selected"; } ?> >1</option>
 					    <option value="2" <?php if($numberOfNumbers == 2){ echo "selected"; } ?> >2</option>
 					    <option value="3" <?php if($numberOfNumbers == 3){ echo "selected"; } ?> >3</option>
@@ -173,17 +158,14 @@ include('logic.php');
 					    <option value="5" <?php if($numberOfNumbers == 5){ echo "selected"; } ?> >5</option>
 					</select>
                </p>
-               </div>
                
-               
-           <div class="col-sm-4 col-xs-11 form-group col-3">
+               <!-- submit button in column div of name -->
+
                <p>
-               		<h4>Does the password need a special character?</h4>
-					<input type="radio" name="characters" value="yes" <?php if($characters == "yes"){ echo "checked"; } ?> > Yes<br>
-					<input type="radio" name="characters" value="no" <?php if($characters == "no"){ echo "checked"; } ?> > No<br>
+               <button class="btn btn-warning btn-lg" input type="submit" name="submitbtn" id="submitbtn">Generate</button>
+               <button class="btn btn-warning btn-lg" input type="reset" name="resetbtn" id="resetbtn">Reset</button>
                </p>
-          
-					</div>
+               </div>
 
 
             </form>
