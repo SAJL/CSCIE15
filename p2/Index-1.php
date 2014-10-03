@@ -75,8 +75,8 @@ include('logic.php');
                 </thead>
                 <tbody>
                   <tr>
-                  <td>http://en.wikipedia.org/wiki/Passphrase#Compared_to_passwords</td>
-                  <td>http://en.wikipedia.org/wiki/Xkcd</td>
+                  <!--<td>http://en.wikipedia.org/wiki/Passphrase#Compared_to_passwords</td>
+                  <td>http://en.wikipedia.org/wiki/Xkcd</td>-->
                     <td>
                     <p>You can read more about the inspiration and theory here: <a href="http://xkcd.com/936/" target="_blank">XKCD Password Strength</a></p>
         <a href="http://xkcd.com/936/" target="_blank">
@@ -125,8 +125,8 @@ include('logic.php');
               </p>
               
                      <p>
-              <label name="upperCase"><h4>Uppercase first letters?</h4></label>
-        <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> />
+              <h4><label name="upperCase">Uppercase first letters?</label>
+        <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> /></h4>
         </p>
 					
                 
@@ -159,8 +159,13 @@ include('logic.php');
 					</select>
                </p>
                
-               <!-- submit button in column div of name -->
+          
+               </div>
+               
+               <!-- submit button in column -->
 
+                <div class="col-sm-4 col-xs-12 form-group col-3">
+                <p></p><p></p>
                <p>
                <button class="btn btn-warning btn-lg" input type="submit" name="submitbtn" id="submitbtn">Generate</button>
                <button class="btn btn-warning btn-lg" input type="reset" name="resetbtn" id="resetbtn">Reset</button>
