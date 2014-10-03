@@ -216,7 +216,6 @@ include('logic.php');
     <script src="js/tooltip.js"></script>
     <script src="js/popover.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/dropdown.js"></script>
     <script src="js/alert.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/button.js"></script>
