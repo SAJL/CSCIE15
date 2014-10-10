@@ -18,17 +18,17 @@
 <!--XKCD Password Generator explination-->      
 		<?php include("includes/explination.php"); ?>
 <!--End XKCD Stype Password Generator Explination-->
-	
-    
-    
-    
-    
-    
-    </div>
-       
 
-		
-    
+<!--Password Generator content-->
+		<?php include("includes/generator.php"); ?>
+<!--End Password generator content-->
+		<br />
+<!--Start Footer-->
+		<?php include("includes/footer.php"); ?>
+<!--end footer-->
+
+	</div>
+
 <!-- javascript -->
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/tooltip.js"></script>
