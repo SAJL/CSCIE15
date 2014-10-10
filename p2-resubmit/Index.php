@@ -1,201 +1,35 @@
-<?php include('logic.php'); ?>
-
-<!doctype html>
-<?php $thisPage="index"; ?>
+<!--CSCIE15-Fall2014-Project2-LedouxSarah-->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  <!--CSCIE15-Fall2014-Project2-LedouxSarah-->
-    <meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEDOUX-Project 2</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+	<div class="container">
 
 <!--Navigation Bar-->
-    	<div class="row">
-          <nav class="navbar navbar-warning navbar-inverse" role="navigation">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                 <span class="glyphicon glyphicon-hand-down"></span>
-                </button>
-              </div>
-              <div class="collapse navbar-collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-fire"></span><br>Home/Project 1<b class="caret"></b></a>
-                       <ul class="dropdown-menu">
-                          <li><a href="https://github.com/SAJL/CSCIE15.git">Git</a></li>
-                          <li><a href="http://sarahledoux.com/hes/cscie15/p1">Live URL</a></li>
-                       </ul>
-                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-comment"></span><br>Project 2<b class="caret"></b></a>
-                       <ul class="dropdown-menu">
-                          <li><a href="https://github.com/SAJL/CSCIE15/tree/master/p2">Git</a></li>
-                          <li><a href="http://sarahledoux.com/hes/cscie15/p2">Live URL</a></li>
-                       </ul>
-                    </li>
-                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-align-center"></span><br>Project 3<b class="caret"></b></a>
-                       <ul class="dropdown-menu">
-                          <li><a href="#">Git</a></li>
-                          <li><a href="#">Live URL</a></li>
-                       </ul>
-                     </li>
-                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-compressed"></span><br>Project 4<b class="caret"></b></a>
-                       <ul class="dropdown-menu">
-                          <li><a href="#">Git</a></li>
-                          <li><a href="#">Live URL</a></li>
-                       </ul>
-                     </li>
-                </ul>
-              </div>
-            </nav>
-        </div>
-      
-		<div class="row">
-		  	<div class="col-xs-12 text-center">
-		 	  	<h1>xkcd style password generator</h1>
-		  	</div>
-            <hr>
-      <!--Show/hide buttons-->            
-         <p>
-         <a href="#" class="btn btn-warning btn-sm" id="hidebtn">Ok, Thanks.</a>
-         <a href="#" class="btn btn-warning btn-sm" id="showbtn">Learn more!</a>
-         </p>
+		<?php include("includes/navigation.php"); ?>
+<!--end nav bar items and dropdowns-->
 
-		  	<div class="col-xs-12 text-center" id="explaination">
-               <table>
-                <thead>
-                  <tr>
-                    <th>This page will generate a new password for you which is easy to remeber, and hard for a machine or human to guess. This is based on the theory that memory devices for a string of random words are less forgetable by you and more secure from hackers.</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  <!--<td>http://en.wikipedia.org/wiki/Passphrase#Compared_to_passwords</td>
-                  <td>http://en.wikipedia.org/wiki/Xkcd</td>-->
-                    <td>
-                    <p>You can read more about the inspiration and theory here: <a href="http://xkcd.com/936/" target="_blank">XKCD Password Strength</a></p>
-        <a href="http://xkcd.com/936/" target="_blank">
-            <img class="comic" src="http://imgs.xkcd.com/comics/password_strength.png" >
-        </a></td>
-                  </tr>
-                </tbody>
-              </table>
-		 	  	
+
+<!--XKCD Password Generator explination-->      
+		<?php include("includes/explination.php"); ?>
+<!--End XKCD Stype Password Generator Explination-->
+	
+    
+    
+    
+    
+    
     </div>
-</ br>
-		  	</div>
-		</div>
-        <!--form/table-->
-<h3>Ready to generate your password?</h3>
-           <hr>
-            <div class="row clearfix">
-              <div class="span12">
-           <div class="table-responsive col-xs-12">
-              <table width="100%" class="table" id="form-table">
-                <thead>
-                  <tr>
-                    <th>Answer a few simply questions and your password will appear in the yellow box</th>
-                  </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>
-                    <br>
-  <form class="fillableform1" id="generatepassword" action="index.php" method="post">
-
-
-<!--dropdown-->
-<div class="col-sm-4 col-xs-12 form-group col-1">
-
-              <p>
-              <!--dropdown1-->
-                	<select class="form-control" id="numberOfWords" name="numberOfWords" >
-                    	<option value="0"> How many words do you want?</option>
-					    <option value="1" <?php if($numberOfWords == 1){ echo "selected"; } ?> >1</option>
-					    <option value="2" <?php if($numberOfWords == 2){ echo "selected"; } ?> >2</option>
-					    <option value="3" <?php if($numberOfWords == 3){ echo "selected"; } ?> >3</option>
-					    <option value="4" <?php if($numberOfWords == 4){ echo "selected"; } ?> >4</option>
-					    <option value="5" <?php if($numberOfWords == 5){ echo "selected"; } ?> >5</option>
-					</select>
-              </p>
-              
-                     <p>
-              <h4><label name="upperCase">Uppercase first letters?</label>
-        <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> /></h4>
-        </p>
-					
-                
-             </div>
-
-
-
-<!-- Col-2 input-->
-                <div class="col-sm-4 col-xs-12 form-group col-2">
-                          
-                <p>
-              		<select class="form-control" id="numberOfchar" name="numberOfchar" >
-                    	<option value="0"> How many Special Characters Required?</option>
-					    <option value="1" <?php if($numberOfChar == 1){ echo "selected"; } ?> >1</option>
-					    <option value="2" <?php if($numberOfChar == 2){ echo "selected"; } ?> >2</option>
-					    <option value="3" <?php if($numberOfChar == 3){ echo "selected"; } ?> >3</option>
-					    <option value="4" <?php if($numberOfChar == 4){ echo "selected"; } ?> >4</option>
-					    <option value="5" <?php if($numberOfChar == 5){ echo "selected"; } ?> >5</option>
-					</select>
-                    </p>
-             
-              <p>
-					<select class="form-control" id="numberOfNumbers" name="numberOfNumbers" >
-						<option value="0">How many numbers are required?</option>
-					    <option value="1" <?php if($numberOfNumbers == 1){ echo "selected"; } ?> >1</option>
-					    <option value="2" <?php if($numberOfNumbers == 2){ echo "selected"; } ?> >2</option>
-					    <option value="3" <?php if($numberOfNumbers == 3){ echo "selected"; } ?> >3</option>
-					    <option value="4" <?php if($numberOfNumbers == 4){ echo "selected"; } ?> >4</option>
-					    <option value="5" <?php if($numberOfNumbers == 5){ echo "selected"; } ?> >5</option>
-					</select>
-               </p>
-               
-          
-               </div>
-               
-               <!-- submit button in column -->
-
-                <div class="col-sm-4 col-xs-12 form-group col-3">
-                <p></p><p></p>
-               <p>
-               <button class="btn btn-warning btn-lg" input type="submit" name="submitbtn" id="submitbtn">Generate</button>
-               <button class="btn btn-warning btn-lg" input type="reset" name="resetbtn" id="resetbtn">Reset</button>
-               </p>
-               </div>
-
-
-            </form>
-                </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div></div></div>
- 
-          
-          
-
-
-		<div class="row">
-			
-		  	<div class="col-md-12 col-xs-12">
-		  		
-		 		<div class="jumbotron answer text-center">
-		  			<?php echo $answer; ?>
-		  		</div>
-		  		
-		  	</div>
-
-		</div>
+       
 
 		
     
-    <!-- javascript -->
+<!-- javascript -->
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/popover.js"></script>
@@ -206,7 +40,7 @@
     <script src="transition.js"></script>
     
       </script>
-  <!--header diappear script-->
+<!--header diappear script-->
   <script>
     $(document).ready(function(){
 
@@ -235,7 +69,7 @@
     
 
   
-  </body>
+</body>
 </html>
 
 

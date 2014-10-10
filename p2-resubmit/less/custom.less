@@ -1,0 +1,302 @@
+//SL Customization, Custom Styles and chnages to Less code stored here for Curation
+
+header {
+    font-family: @font-family-monospace;
+	padding: 0em;
+	margin: 0em;
+    border-bottom: .18em solid @brand-ltyellow;
+    font-style: normal;
+    font-size: 25px;
+    color: @brand-ltyellow;
+    text-align: float:left;
+}
+
+body {
+    background-color: @brand-black;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1em;
+	margin: em;
+    font-style: normal;
+    color: @brand-white;
+    text-align: float:left;
+}
+
+hr {
+  width: 100%;
+  color: @brand-yellow;
+  background-color: @brand-yellow;
+  height: .3em;
+  
+}
+
+footer {
+    padding: 1em;
+	margin: 1em;
+	border-top: .3em solid @brand-ltyellow;
+	color: @brand-yellow;
+	text-align: center;
+    
+}
+
+
+//SLCustom Jumbotrom Alignment
+.jumbotron {
+    text-align: center;
+    
+}
+
+//SLCustom Thumbnail background and activity
+.thumbnail {
+    padding: .5em;
+    line-height: 1.5;
+    background-color: @brand-yellow;
+	border: .3em solid @brand-ltyellow;
+	border-radius: 5em;
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 1em;
+    text-align: center;
+    font-style: bold;
+    color: @brand-black;
+}
+
+
+//SLCustom Navigation bar stroke to override default
+.navbar-inverse {
+    background: url(../images/freebackgroundfile.jpg);
+    border: .3em solid @brand-ltyellow;
+	border-radius: 1em;
+    font-size: 14px
+}
+
+//SLCustom Link colors in Nav bar
+    .navbar-inverse .nav > li > a {
+    color: @brand-yellow;
+}
+
+    .navbar-inverse .nav > li > a:hover {
+    color: @brand-white;
+}
+
+    .navbar-inverse .nav > li.active a {
+    color: @brand-white;
+    
+}
+
+
+.navbar-toggle {
+  position: relative;
+  float: left;
+  margin-left: @navbar-padding-horizontal;
+  padding: 9px 10px;
+  font-size: 30px;
+  color:  @brand-yellow;
+  border-radius: 1em;
+  .navbar-vertical-align(34px);
+  background-color: transparent;
+
+}
+    
+// SLCustom Navigation Dropdown
+
+@dropdown-bg:                    @brand-black;
+@dropdown-border:                @brand-ltyellow;
+@dropdown-fallback-border:       @brand-yellow;
+@dropdown-divider-bg:            @brand-yellow;
+
+@dropdown-link-color:            @brand-yellow;
+@dropdown-link-hover-color:      @brand-white;
+@dropdown-link-hover-bg:         @brand-warning;
+
+@dropdown-link-active-color:     @brand-yellow;
+@dropdown-link-active-bg:        @brand-black;
+
+@dropdown-link-disabled-color:   @brand-yellow;
+
+@dropdown-header-color:          @brand-yellow;
+
+@dropdown-caret-color:           @brand-white;
+
+
+
+//SLCustom Popover, Arrow color change in variables.less
+.popover {
+    padding: .em;
+    background: url(../images/freebackgroundfile.jpg);
+	position: absolute;
+	display: none;
+	border-color: @brand-ltyellow;
+	border-style: solid;
+	border-width: .3em;
+	height: 15em;
+	width: 16em;
+    font-weight: normal;
+    font-size: 14px;
+    color: @brand-white;
+
+ }
+ 
+ .popover-title {
+  margin: 0; // reset heading margin
+  padding: .5em;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 18px;
+  background-color: @brand-black;
+  border-bottom: .1em solid @brand-white;
+  border-radius: 5px 5px 0 0;
+
+}
+
+
+// SLCustom, changes in settings for Carousel
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: @carousel-control-width;
+  .opacity(@carousel-control-opacity);
+  font-size: 30px;
+  color: @brand-yellow;
+  text-align: center;
+  text-shadow: @carousel-text-shadow;
+  &.left {
+    #gradient > .horizontal(@start-color: rgba(.1,0,0,9); @end-color: rgba(1,0,0,.01));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    #gradient > .horizontal(@start-color: rgba(1,0,0,.01); @end-color: rgba(.1,0,0,9));
+  }
+
+  &:hover,
+  &:focus {
+    color: @carousel-control-color;
+    text-decoration: none;
+    .opacity(.9);
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  bottom: 50px;
+  list-style: bold;
+  text-align: center;
+  text-shadow: @brand-yellow;
+
+  li {
+    display: inline-block;
+    width:  20px;
+    height: 20px;
+    margin: 0px;
+    text-indent: -999px;
+    border: 4px solid @brand-yellow;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #000 \9; // IE8
+    background-color: rgba(1,3,2,5); // IE9
+  }
+  .active {
+    margin: 10;
+    width:  20px;
+    height: 20px;
+    background-color: @brand-yellow;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 2px;
+  z-index: 10;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: @carousel-caption-color;
+  text-align: center;
+  font-size: 16px;
+  text-shadow: @carousel-text-shadow;
+  left: 20%;
+  right: 20%;
+  padding-bottom: 5px;
+    #gradient > .vertical(@start-color: rgba(0,0,0,50); @end-color: rgba(0,0,0,.01));
+  & .btn {
+    text-shadow: @carousel-text-shadow;
+
+  }
+}
+
+//SLCustom fixed width button
+.btn {
+  width: 120px;
+  
+}
+
+//SLCustom table styles
+table {
+  max-width: 100%;
+  background: url(../images/freebackgroundfile.jpg);
+}
+th {
+  text-align: left;
+}
+
+
+// Baseline styles
+
+.table {
+  width: 100%;
+  margin-bottom: @line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding;
+        line-height: 2em;
+        vertical-align: middle;
+        border-top: .1em solid @brand-ltyellow;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: .5em solid @brand-yellow;
+  }
+}
+
+//SLCustom, Responsive Carousel Images through Pane Control
+.carousel {
+    overflow:hidden;
+    width:100%;
+}
+.panes {
+    position: relative;
+    width: 400%;
+    overflow: hidden;
+        
+}
+.panes > li {
+    position: relative;
+    float: left;
+    width: 25%;
+}
+.carousel img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
