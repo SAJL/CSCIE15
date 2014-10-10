@@ -11,100 +11,25 @@
 	<div class="container">
 
 <!--Navigation Bar-->
-		<div class="row">
-        <nav class="navbar navbar-warning navbar-inverse" role="navigation">
-        	<div class="navbar-header">
-            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                 <span class="glyphicon glyphicon-hand-down"></span>
-                </button>
-             </div>
-             <div class="collapse navbar-collapse navbar-collapse">
-             	<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-fire"></span><br>Home/Project 1<b class="caret"></b></a>
-                    	<ul class="dropdown-menu">
-                        	<li><a href="https://github.com/SAJL/CSCIE15.git">Git</a></li>
-                            <li><a href="http://sarahledoux.com/hes/cscie15/p1">Live URL</a></li>
-						</ul>
-					</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-comment"></span><br>Project 2<b class="caret"></b></a>
-                      	<ul class="dropdown-menu">
-                        	<li><a href="https://github.com/SAJL/CSCIE15/tree/master/p2">Git</a></li>
-                        	<li><a href="http://sarahledoux.com/hes/cscie15/p2">Live URL</a></li>
-                    	</ul>
-                    </li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-align-center"></span><br>Project 3<b class="caret"></b></a>
-                       	<ul class="dropdown-menu">
-                        	<li><a href="#">Git</a></li>
-                            <li><a href="#">Live URL</a></li>
-                        </ul>
-                   	</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-compressed"></span><br>Project 4<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Git</a></li>
-							<li><a href="#">Live URL</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		</div>
+		<?php include("includes/navigation.php"); ?>
 <!--end nav bar items and dropdowns-->
 
 
 <!--XKCD Password Generator explination-->      
-		<div class="row">
-		  	<div class="col-xs-12 text-center">
-		 	  	<h1>xkcd style password generator</h1>
-		  	</div>
-            <hr>
-	<!--Show/hide buttons-->            
-         	<p>
-         		<a href="#" class="btn btn-warning btn-sm" id="hidebtn">Ok, Thanks.</a>
-         		<a href="#" class="btn btn-warning btn-sm" id="showbtn">Learn more!</a>
-         	</p>
-     <!--End Show/Hide Buttons-->
-
-		  	<div class="col-xs-12 text-center" id="explaination">
-               <table>
-                <thead>
-                  <tr>
-                    <th>This page will generate a new password for you which is easy to remeber, and hard for a machine or human to guess. This is based on the theory that memory devices for a string of random words are less forgetable by you and more secure from hackers.
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  <!--<td>http://en.wikipedia.org/wiki/Passphrase#Compared_to_passwords</td>
-                  <td>http://en.wikipedia.org/wiki/Xkcd</td>-->
-                    <td>
-                    	<p>You can read more about the inspiration and theory here:
-                        <a href="http://xkcd.com/936/" target="_blank">XKCD Password Strength</a>
-                        </p>
-        				<a href="http://xkcd.com/936/" target="_blank">
-            			<img class="comic" src="http://imgs.xkcd.com/comics/password_strength.png"></a>
-					</td>
-                  </tr>
-                </tbody>
-              </table>
-			</div>
-        	</br>
-		</div>
+		<?php include("includes/explination.php"); ?>
 <!--End XKCD Stype Password Generator Explination-->
-	
-    
-    
-    
-    
-    
-    </div>
-       
 
-		
-    
+<!--Password Generator content-->
+		<?php include("includes/generator.php"); ?>
+<!--End Password generator content-->
+		<br />
+        
+<!--Start Footer-->
+		<?php include("includes/footer.php"); ?>
+<!--end footer-->
+
+	</div>
+
 <!-- javascript -->
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="js/tooltip.js"></script>

@@ -23,6 +23,7 @@
 		<?php include("includes/generator.php"); ?>
 <!--End Password generator content-->
 		<br />
+        
 <!--Start Footer-->
 		<?php include("includes/footer.php"); ?>
 <!--end footer-->
