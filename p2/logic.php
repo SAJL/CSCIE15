@@ -1,6 +1,6 @@
 <?php
 
-//data drom index.php form via $_POST
+//data drom index.html form via $_POST
 //get number of words
 if (isset($_POST['numberOfWords']) > 0){
     $numberOfWords = $_POST['numberOfWords'];
@@ -34,7 +34,7 @@ if (isset($_POST['upperCase'])){
 
 //declare variables
 $answer = "";
-$selwords_array = []; //hold the words generated for the password
+$selwords_array = []; //wait
 $symbols_array = ['!','@','$','%','^','&','*','(',')','~','-','_','+','='];
 $numbers_array = [0,1,2,3,4,5,6,7,8,9];
 
