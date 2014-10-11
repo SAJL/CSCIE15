@@ -5,7 +5,8 @@
 if (isset($_POST['numberOfWords']) > 0){
     $numberOfWords = $_POST['numberOfWords'];
 } else {
-	
+// if numberOfWords not there then default
+    $numberOfWords = 1;
 }
 
 //get if first letter of every word upperCase
@@ -63,13 +64,6 @@ if ($word_array = file('wordsEnglish.txt')) {
 		$rand = rand(0, count($selwords_array) - 1);
 		array_splice($selwords_array, $rand, 0, $one_number);
 	}
-
-	if ($numberOfCharacters == true) {
-		$rand = rand(0, count($symbols_array) - 1);
-		$one_symbol = $symbols_array[$rand] . " ";
-		$rand = rand(0, count($selwords_array) - 1);
-		array_splice($selwords_array, $rand, 0, $one_symbol);
-		}
 
 	//add symbols
 	for ($i = 0; $i < $numberOfCharacters; $i++) {
