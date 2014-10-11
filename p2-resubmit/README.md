@@ -7,7 +7,7 @@ Project 2: XKCD style password genorator
 
 Live URL:
 
-http://p2.sarahledoux.com/CSCIE15/p2-resubmit/
+http://p2.sarahledoux.com/
 
 Description:
 
