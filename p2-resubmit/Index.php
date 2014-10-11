@@ -21,7 +21,7 @@ require 'includes/logic.php';
 <!--XKCD Password Generator explination-->      
 		<?php include("includes/explination.php"); ?>
 <!--End XKCD Stype Password Generator Explination-->
-
+</div>
 <!--Password Generator content-->
 <!--form/table-->
 <h3>Ready to generate your password?</h3>
@@ -42,51 +42,30 @@ require 'includes/logic.php';
 
 
 <!--dropdown-->
-<div class="col-sm-4 col-xs-12 form-group col-1">
-  <form method="POST" action="index.php">
+<form method="POST" action="index.php">
 
-              <p>
-              <!--dropdown1-->
-              <h3>How many words do you want?</h3>
-                	<select class="form-control" id="numberOfWords" name="numberOfWords" >
-              
+<!--Col-1 input-->
+        <div class="col-sm-6 col-xs-12 form-group col-1">
+        <p>
+                <h3 style="float:right">
+           <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> />
+           <label style="padding-left:10px" name="upperCase">Uppercase first letters?</label>
+           </h3>
+                <h3>How many words?</h3>
+            <select class="form-control" id="numberOfWords" name="numberOfWords" >
+              <option value="0">Please choose a value</option>
 					    <option <?php echo ($numberOfWords) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
 					    <option <?php echo ($numberOfWords) == 2 ? 'selected="selected"' : ''; ?> value='2'>2</option>
 					    <option <?php echo ($numberOfWords) == 3 ? 'selected="selected"' : ''; ?> value='3'>3</option>
 					    <option <?php echo ($numberOfWords) == 4 ? 'selected="selected"' : ''; ?> value='4'>4</option>
 					    <option <?php echo ($numberOfWords) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
-					</select>
-              </p>
-              
-                     <p>
-              <h4><label name="upperCase">Uppercase first letters?</label>
-        <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> /></h4>
-        </p>
-					
+					 </select>
+           </p>
                 
-             </div>
-
-
-
-<!-- Col-2 input-->
-                <div class="col-sm-4 col-xs-12 form-group col-2">
-                          
                 <p>
-                  <h3>How many Special Characters Required?</h3>
-              		<select class="form-control" id="numberOfCharacters" name="numberOfCharacters" >
-                    	<option value="0">How many Special Characters Required?</option>
-					    <option <?php echo ($numberOfCharacters) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
-              <option <?php echo ($numberOfCharacters) == 2 ? 'selected="selected"' : ''; ?> value='2'>2</option>
-              <option <?php echo ($numberOfCharacters) == 3 ? 'selected="selected"' : ''; ?> value='3'>3</option>
-              <option <?php echo ($numberOfCharacters) == 4 ? 'selected="selected"' : ''; ?> value='4'>4</option>
-              <option <?php echo ($numberOfCharacters) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
-					</select>
-                    </p>
-             
-              <p>
-                <h3>How many numbers are required?</h3>
+                <h3>How many numbers?</h3>
 					<select class="form-control" id="numberOfNumbers" name="numberOfNumbers" >
-						<option value="0">How many numbers are required?</option>
+						  <option value="0">Please choose a value</option>
 					    <option <?php echo ($numberOfNumbers) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
               <option <?php echo ($numberOfNumbers) == 2 ? 'selected="selected"' : ''; ?> value='2'>2</option>
               <option <?php echo ($numberOfNumbers) == 3 ? 'selected="selected"' : ''; ?> value='3'>3</option>
@@ -94,22 +73,32 @@ require 'includes/logic.php';
               <option <?php echo ($numberOfNumbers) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
 					</select>
                </p>
+            </div>
+
+
+<!-- Col-2 input-->
+                <div class="col-sm-6 col-xs-12 form-group col-2">
+          <p>
+           <h3>How many special characters?</h3>
+            <select class="form-control" id="numberOfCharacters" name="numberOfCharacters" >
+              <option value="0">Please choose a value</option>
+					    <option <?php echo ($numberOfCharacters) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
+              <option <?php echo ($numberOfCharacters) == 2 ? 'selected="selected"' : ''; ?> value='2'>2</option>
+              <option <?php echo ($numberOfCharacters) == 3 ? 'selected="selected"' : ''; ?> value='3'>3</option>
+              <option <?php echo ($numberOfCharacters) == 4 ? 'selected="selected"' : ''; ?> value='4'>4</option>
+              <option <?php echo ($numberOfCharacters) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
+					</select>
+                </p>      
+           <br>
+            <p style="float:right">
+            	<button style="padding:20px" class="btn btn-warning btn-lg" input type="submit" name="generate" id="generatebtn">Generate!</button>
+            	<button style="padding:20px" class="btn btn-warning btn-lg" input type="submit" name="another" id="anotherbtn">Another!</button>
+            </p>
+           
+           
+
+				</div>
                
-          
-               </div>
-               
-               <!-- submit button in column -->
-
-                <div class="col-sm-4 col-xs-12 form-group col-3">
-                <p></p><p></p>
-               <p>
-               <button class="btn btn-warning btn-lg" input type="submit" name="submitbtn" id="submitbtn">Generate</button>
-               <button class="btn btn-warning btn-lg" input type="reset" name="resetbtn" id="resetbtn">Reset</button>
-               </p>
-               </div>
-
-
-            </form>
                 </td>
                   </tr>
                 </tbody>
@@ -124,12 +113,12 @@ require 'includes/logic.php';
 		 		<div class="jumbotron answer text-center">
 		  			<?php echo $answer; ?>
 		  		</div>
+          </form>
 		  		
 		  	</div>
 
 		</div>
 <!--End Password generator content-->
-		<br />
         
 <!--Start Footer-->
 		<?php include("includes/footer.php"); ?>
@@ -154,23 +143,37 @@ require 'includes/logic.php';
 
 	//Show/hide explination and controller buttons
 
-        //Auto Hide           
-        $("#explaination").hide();
-		$("#hidebtn").hide();
-		$("#showbtn").show();
-		
-		//click function
+    //Auto Hide Explination          
+    $("#explaination").hide();
+    $("#hidebtn").hide();
+    $("#showbtn").show();
+    
+    //click function
        $("#showbtn").click(function(){
              $("#showbtn").hide(1000);
              $("#explaination").show(1000);
-			 $("#hidebtn").show(1500);
+       $("#hidebtn").show(1500);
         });
 
       $("#hidebtn").click(function(){
              $("#showbtn").show(1500);
              $("#explaination").hide(1000);
-			 $("#hidebtn").hide(1000);
+       $("#hidebtn").hide(1000);
        });//end show/hide
+
+  
+  //Switch generate buttons
+
+      //Auto Hide Another button
+      $("#anotherbtn").hide();
+      $("#generatebtn").show();
+    
+    //click function for generate buttons
+       $("#generatebtn").click(function(){
+             $("#generatebtn").hide(1000);
+             $("#anotherbtn").show(1000);
+        });           
+    
 	  
     }); //end ready
 	</script>

@@ -5,8 +5,7 @@
 if (isset($_POST['numberOfWords']) > 0){
     $numberOfWords = $_POST['numberOfWords'];
 } else {
-	//if numberOfWords not there then default
-	$numberOfWords = 4;
+	
 }
 
 //get if first letter of every word upperCase
@@ -33,6 +32,12 @@ if (isset($_POST['numberOfNumbers']) > 0){
 }
 
 //out
+
+//declare and set some needed variables
+$answer = "";
+$selwords_array = []; //hold the words generated for the password
+$symbols_array = ['!','@','$','%','^','&','*','(',')','~','-','_','+','='];
+$numbers_array = [0,1,2,3,4,5,6,7,8,9];
 
 //text file to array of words
 if ($word_array = file('wordsEnglish.txt')) {
