@@ -9,12 +9,11 @@ if (isset($_POST['numberOfWords']) > 0){
 	$numberOfWords = 4;
 }
 
-//get number of numbers
-if (isset($_POST['numberOfNumbers']) > 0){
-	$numberOfNumbers = $_POST['numberOfNumbers'];
-} else {
-	//if numberOfNumbers not there then default
-    $numberOfNumbers = 0;
+//get if first letter of every word upperCase
+if (isset($_POST['upperCase'])){
+    $upperCase = true;  
+}else {
+    $upperCase = false; 
 }
 
 //get number of symbols
@@ -25,18 +24,15 @@ if (isset($_POST['numberOfCharacters']) > 0){
     $numberOfCharacters = 0;
 }
 
-//get if first letter of every word upperCase
-if (isset($_POST['upperCase'])){
-    $upperCase = true;  
-}else {
-    $upperCase = false; 
+//get number of numbers
+if (isset($_POST['numberOfNumbers']) > 0){
+	$numberOfNumbers = $_POST['numberOfNumbers'];
+} else {
+	//if numberOfNumbers not there then default
+    $numberOfNumbers = 0;
 }
 
-//declare variables
-$answer = "";
-$selwords_array = []; //wait
-$symbols_array = ['!','@','$','%','^','&','*','(',')','~','-','_','+','='];
-$numbers_array = [0,1,2,3,4,5,6,7,8,9];
+//out
 
 //text file to array of words
 if ($word_array = file('wordsEnglish.txt')) {

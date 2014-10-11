@@ -1,3 +1,4 @@
+<?php include('logic.php'); ?>
 <!--form/table-->
 <h3>Ready to generate your password?</h3>
            <hr>
@@ -14,7 +15,7 @@
                 <tr>
                     <td>
                     <br>
-  <form class="fillableform1" id="generatepassword" action="index.html" method="post">
+  <form class="fillableform1" id="generatepassword" action="index.php" method="post">
 
 
 <!--dropdown-->
