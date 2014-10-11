@@ -107,6 +107,7 @@ require 'includes/logic.php';
 			<div class="col-md-12 col-xs-12">
 		  		<div class="jumbotron answer text-center">
 		  		<?php echo $answer; ?>
+		  		<br>
 		  		</div>
 		  	</div>
       </div>
