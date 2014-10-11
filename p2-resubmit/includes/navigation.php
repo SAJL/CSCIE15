@@ -18,8 +18,8 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<span class="glyphicon glyphicon-comment"></span><br>Project 2<b class="caret"></b></a>
                       	<ul class="dropdown-menu">
-                        	<li><a href="https://github.com/SAJL/CSCIE15/tree/master/p2">Git</a></li>
-                        	<li><a href="http://sarahledoux.com/hes/cscie15/p2">Live URL</a></li>
+                        	<li><a href="https://github.com/SAJL/CSCIE15/edit/master/p2-resubmit/">Git</a></li>
+                        	<li><a href="http://p2.sarahledoux.com/">Live URL</a></li>
                     	</ul>
                     </li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
