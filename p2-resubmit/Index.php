@@ -42,16 +42,17 @@ require 'includes/logic.php';
 
 
 <!--dropdown-->
-<form method="POST" action="index.php">
+    <form method="POST" action="index.php">
 
 <!--Col-1 input-->
         <div class="col-sm-6 col-xs-12 form-group col-1">
-        <p>
-                <h3 style="float:right">
-           <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> />
-           <label style="padding-left:10px" name="upperCase">Uppercase first letters?</label>
-           </h3>
-                <h3>How many words?</h3>
+          <p>
+            <h3 style="float:right">
+              <input type="checkbox" name="upperCase" value="upperCase" <?php echo ($upperCase) ? "checked='checked'" : "" ; ?> />
+              <label style="padding-left:10px" name="upperCase">Uppercase first letters?</label>
+            </h3>
+                
+            <h3>How many words?</h3>
             <select class="form-control" id="numberOfWords" name="numberOfWords" >
               <option value="0">Please choose a value</option>
 					    <option <?php echo ($numberOfWords) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
@@ -62,8 +63,8 @@ require 'includes/logic.php';
 					 </select>
            </p>
                 
-                <p>
-                <h3>How many numbers?</h3>
+          <p>
+          <h3>How many numbers?</h3>
 					<select class="form-control" id="numberOfNumbers" name="numberOfNumbers" >
 						  <option value="0">Please choose a value</option>
 					    <option <?php echo ($numberOfNumbers) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
@@ -71,15 +72,15 @@ require 'includes/logic.php';
               <option <?php echo ($numberOfNumbers) == 3 ? 'selected="selected"' : ''; ?> value='3'>3</option>
               <option <?php echo ($numberOfNumbers) == 4 ? 'selected="selected"' : ''; ?> value='4'>4</option>
               <option <?php echo ($numberOfNumbers) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
-					</select>
-               </p>
-            </div>
+					 </select>
+          </p>
+        </div>
 
 
 <!-- Col-2 input-->
-                <div class="col-sm-6 col-xs-12 form-group col-2">
+       <div class="col-sm-6 col-xs-12 form-group col-2">
           <p>
-           <h3>How many special characters?</h3>
+          <h3>How many special characters?</h3>
             <select class="form-control" id="numberOfCharacters" name="numberOfCharacters" >
               <option value="0">Please choose a value</option>
 					    <option <?php echo ($numberOfCharacters) == 1 ? 'selected="selected"' : ''; ?> value='1'>1</option>
@@ -88,36 +89,28 @@ require 'includes/logic.php';
               <option <?php echo ($numberOfCharacters) == 4 ? 'selected="selected"' : ''; ?> value='4'>4</option>
               <option <?php echo ($numberOfCharacters) == 5 ? 'selected="selected"' : ''; ?> value='5'>5</option>
 					</select>
-                </p>      
-           <br>
-            <p style="float:right">
-            	<button style="padding:20px" class="btn btn-warning btn-lg" input type="submit" name="generate" id="generatebtn">Generate!</button>
-            	<button style="padding:20px" class="btn btn-warning btn-lg" input type="submit" name="another" id="anotherbtn">Another!</button>
-            </p>
+          </p>      
+          
+          <br>
+            
+          <p style="float:right">
+          <button style="padding:20px" class="btn btn-warning btn-lg" input type="submit" name="generate" id="generatebtn">Generate!</button>
+          </p>
            
-           
-
 				</div>
                
-                </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div></div></div>
+      </td></tr></tbody></table>
+    </div></div></div>
           
-        <!--Jumbotron answer-->  
+<!--Jumbotron answer-->  
 		<div class="row">
-			
-		  	<div class="col-md-12 col-xs-12">
-		  		
-		 		<div class="jumbotron answer text-center">
-		  			<?php echo $answer; ?>
+			<div class="col-md-12 col-xs-12">
+		  		<div class="jumbotron answer text-center">
+		  		<?php echo $answer; ?>
 		  		</div>
-          </form>
-		  		
 		  	</div>
-
-		</div>
+      </div>
+    </form>
 <!--End Password generator content-->
         
 <!--Start Footer-->
@@ -160,19 +153,6 @@ require 'includes/logic.php';
              $("#explaination").hide(1000);
        $("#hidebtn").hide(1000);
        });//end show/hide
-
-  
-  //Switch generate buttons
-
-      //Auto Hide Another button
-      $("#anotherbtn").hide();
-      $("#generatebtn").show();
-    
-    //click function for generate buttons
-       $("#generatebtn").click(function(){
-             $("#generatebtn").hide(1000);
-             $("#anotherbtn").show(1000);
-        });           
     
 	  
     }); //end ready
