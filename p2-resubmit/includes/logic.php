@@ -4,9 +4,6 @@
 //get number of words
 if (isset($_POST['numberOfWords']) > 0){
     $numberOfWords = $_POST['numberOfWords'];
-} else {
-// if numberOfWords not there then default
-    $numberOfWords = 1;
 }
 
 //get if first letter of every word upperCase
