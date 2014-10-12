@@ -14,8 +14,8 @@ Description:
 A get random password generator of a collection of random words which are easy to remember, but hard to guess. 
 
 Demo:
-
-I'll be attending my Friday section with Alain to do an WebEx demo.
+Demo Can befound on Jing ScreenCast here:
+http://screencast.com/t/OZOxkiRYeLM
 
 Details for teaching team:
 
